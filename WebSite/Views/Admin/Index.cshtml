@@ -1,24 +1,25 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Send circural mail</h2>
 
-    <input type="text" placeholder="Title" id="title"/>
-    <textarea cols="100" rows="30" id="content"></textarea>
-    <input type="button" value="Send Emails" class="btn btn-success" id="submit"/>
+<input type="text" placeholder="Title" id="title" class="form-control" />
+<textarea cols="300" rows="30" id="content" class="form-control"></textarea>
+<input type="button" value="Send Emails" class="btn btn-success" id="submit" />
 
 @section Scripts{
     <script>
-    $(function(){
-        $("#submit").on("click", function () {
-            var email = {
-                title : $("#title").val(),
-                content: $("#content").val()
-            };
-            $.post("/Admin/SendEmails", email);
+        $(function () {
+            $("#submit").on("click", function () {
+                var email = {
+                    title: $("#title").val(),
+                    content: $("#content").val()
+                };
+                $.post("/Admin/SendEmails", email);
+            });
         });
-    });
     </script>
+    <script src="~/Scripts/tinymce/tinymce.min.js"></script>
+    <script>tinymce.init({ selector: "#content" });</script>
 }
