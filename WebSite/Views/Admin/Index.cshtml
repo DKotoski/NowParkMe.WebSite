@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+    <input type="text" placeholder="Title" id="title"/>
+    <textarea cols="100" rows="30" id="content"></textarea>
+    <input type="button" value="Send Emails" class="btn btn-success" id="submit"/>
+
+@section Scripts{
+    <script>
+    $(function(){
+        $("#submit").on("click", function () {
+            var email = {
+                title : $("#title").val(),
+                content: $("#content").val()
+            };
+            $.post("/Admin/SendEmails", email);
+        });
+    });
+    </script>
+}
