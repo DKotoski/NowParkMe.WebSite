@@ -162,13 +162,38 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\animate.css" />
+    <Content Include="Content\css\bootstrap-theme.css" />
+    <Content Include="Content\css\bootstrap-theme.min.css" />
+    <Content Include="Content\css\bootstrap.css" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\flexslider.css" />
+    <Content Include="Content\css\queries.css" />
+    <Content Include="Content\css\styles.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="img\h1-bg.png" />
+    <Content Include="img\hero-bg.jpg" />
+    <Content Include="img\iphone-bg.png" />
+    <Content Include="img\keyboard-bg.jpg" />
+    <Content Include="img\l1.jpg" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\plants-bg.jpg" />
+    <Content Include="img\portfolio-01.jpg" />
+    <Content Include="img\portfolio-02.jpg" />
+    <Content Include="img\portfolio-03.jpg" />
+    <Content Include="img\team-01.png" />
+    <Content Include="img\team-02.png" />
+    <Content Include="img\team-03.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config" />
+    <Content Include="img\.DS_Store" />
+    <Content Include="Content\css\.DS_Store" />
+    <Content Include="Content\css\bootstrap-theme.css.map" />
+    <Content Include="Content\css\bootstrap.css.map" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -177,6 +202,15 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\js\bootstrap.js" />
+    <Content Include="Scripts\js\bootstrap.min.js" />
+    <Content Include="Scripts\js\jquery.flexslider.js" />
+    <Content Include="Scripts\js\jquery.smooth-scroll.js" />
+    <Content Include="Scripts\js\min\scripts-ck.js" />
+    <Content Include="Scripts\js\modernizr.js" />
+    <Content Include="Scripts\js\overlay.js" />
+    <Content Include="Scripts\js\scripts.js" />
+    <Content Include="Scripts\js\waypoints.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
@@ -278,6 +312,8 @@
     <Content Include="Scripts\tinymce\skins\lightgray\fonts\tinymce.eot" />
     <Content Include="Scripts\tinymce\skins\lightgray\fonts\tinymce.ttf" />
     <Content Include="Scripts\tinymce\skins\lightgray\fonts\tinymce.woff" />
+    <Content Include="Scripts\js\.DS_Store" />
+    <Content Include="Scripts\js\min\.DS_Store" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
