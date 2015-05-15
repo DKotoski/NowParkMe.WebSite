@@ -14,8 +14,9 @@
             $("#submit").on("click", function () {
                 var email = {
                     title: $("#title").val(),
-                    content: $("#content").val()
+                    content: tinyMCE.activeEditor.getContent({ format: 'raw' })
                 };
+                console.log(email);
                 $.post("/Admin/SendEmails", email);
             });
         });
