@@ -3,10 +3,10 @@
 /* Logo css Jordan*/
 
 .logo {
-	width: 15%;
+	width: 25%;
 	position:relative;
 	top:10%;
-	left: 42.5%;
+	left: 37.5%;
 }
 
 .logo img{
@@ -199,7 +199,7 @@ h2::after { content: " "; border: solid 2px #3dc9b3; display: block; width: 35px
 .box-hover:hover, .box-hover:focus { transform: translate(0, -15px); -webkit-transform: translate(0, -15px); -ms-transform: translate(0, -15px); }
 .wrapper { height: 650px; }
 .nopadding { padding: 0; }
-.inner { padding-top: 170px; }
+.inner { padding-top: 20px; }
 /* ==========================================================================
 Navigation
 ========================================================================== */
@@ -235,8 +235,8 @@ Hero
     height: auto;
 }
 .hero h1 { font-size: 40px; letter-spacing: 12px; margin: 10px; }
-.hero h1 span { color: #a1a9b0; display: inline-block; }
-.hero p { letter-spacing: 1px; }
+.hero h1 span { color: #000000; display: inline-block; }
+.hero p { letter-spacing: 1px; color: #000000; }
 .learn-more-btn { background: rgba(61, 201, 179, 1); padding: 20px 40px; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; -o-border-radius: 5px; color: #fff; text-transform: uppercase; letter-spacing: 1px; display: inline-block; -webkit-box-shadow: 0px 3px 0px 0px #309383; -moz-box-shadow: 0px 3px 0px 0px #309383; box-shadow: 0px 3px 0px 0px #309383; margin: 60px 0 0; font-weight: bold; }
 .learn-more-btn:hover, .learn-more-btn:focus { background: rgba(61, 201, 179, 0.6); color: #fff; }
 /* ==========================================================================
