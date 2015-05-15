@@ -11,7 +11,8 @@ namespace WebSite.Models
     public class Subscriber
     {
         [Key]
-        [Column(Order = 1)] 
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Column(Order = 1)]         
         public int ID { get; set; }
         [DataType(DataType.EmailAddress)]
         [Column(Order = 2)] 

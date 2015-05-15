@@ -21,22 +21,26 @@ namespace WebSite.Controllers
         }
 
         [Authorize]
+        [ValidateInput(false)] 
         public JsonResult SendEmails(string title, string content)
         {
             SmtpClient client = new SmtpClient();
+            client.DeliveryMethod = SmtpDeliveryMethod.Network;
             client.Credentials = new NetworkCredential("contact@nowpark.me", "ninja");
-            MailMessage mailMessage = new MailMessage();
-            mailMessage.From = new MailAddress("contact@nowpark.me");
-            mailMessage.Subject = title;
-            mailMessage.Body = content;
+            MailMessage mailMessage;
 
-            foreach (var subscriber in db.Subscribers)
+            foreach (var subscriber in db.Subscribers.ToList())
             {
+                mailMessage = new MailMessage();
+                mailMessage.From = new MailAddress("contact@nowpark.me");
+                mailMessage.IsBodyHtml = true;
+                mailMessage.Subject = title;
+                mailMessage.Body = content;
                 mailMessage.To.Add(subscriber.Email);
+                client.Send(mailMessage);
             }
 
-            client.Send(mailMessage);
-            return Json("True");
+            return Json("Done", JsonRequestBehavior.AllowGet);
         }
 
         public ActionResult LogIn()
@@ -45,7 +49,7 @@ namespace WebSite.Controllers
         }
 
         [HttpPost]
-        public ActionResult LogIn(string username,string password)
+        public ActionResult LogIn(string username, string password)
         {
             if (username == "admin" && password == "password")
             {

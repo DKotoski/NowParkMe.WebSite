@@ -32,12 +32,21 @@
                 <div class="logo">
                     <img src="~/img/logo.png" alt="nowpark.me logo" />
                 </div>
+<<<<<<< HEAD
                 <div class="col-md-8 col-md-offset-2 text-center inner">
                     <h1 class="animated fadeInDown"><span> Parking reinvented</span></h1>
                     <p class="animated fadeInUp delay-05s">
                         What if parking could be stress-free, time-saving and really fun?
                         Be among the first to find out how this is possible. Subscribe to get a special surprise when we launch.
                     </p>
+=======
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3 text-center subscribe_head">
+                           <!--Darko enter razor--> <input type="text" name="email" id="email"/>
+                            <input type="submit" id="subscribe" value="Subscribe"/>
+                        <span id="valMessage"></span>
+                    </div>
+>>>>>>> origin/master
                 </div>
             </div>
             <div class="row">
@@ -403,6 +412,7 @@
                 </ul>
             </div>
         </div>
+<<<<<<< HEAD
     </div>
 </section>
 <footer>
@@ -420,3 +430,32 @@
         </div>
     </div>
 </footer>
+=======
+    </footer>
+    
+@section Scripts{
+<script>
+    $(function () {
+        $("#subscribe").on("click", function() {
+            var email = $("#email");
+            var filter = /^([a-zA-Z0-9_\.\-])+\@@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+        if (!filter.test(email.val())) {
+            $("#valMessage").html("<p style='color:red;'>Please input valid e-mail.</p>");
+            email.focus();
+            return;
+            }else
+        {
+            $.post("/Home/Subscribe", { email: email.val() }, function (res) {
+                if (res == "True") {
+                    $("#valMessage").html("<p style='color:green;'>You have subscribed in our newsletter. Stay tuned for news :)</p>");
+                } else {
+                    $("#valMessage").html("<p style='color:red;'>Email is already in our database.</p>");
+                }
+            });
+        }
+        });
+    });
+    </script>
+}
+>>>>>>> origin/master
