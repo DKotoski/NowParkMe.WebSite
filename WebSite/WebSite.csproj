@@ -174,10 +174,15 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="img\darko.png" />
     <Content Include="img\h1-bg.png" />
     <Content Include="img\hero-bg.jpg" />
     <Content Include="img\iphone-bg.png" />
+    <Content Include="img\ivana.png" />
+    <Content Include="img\jordan.png" />
     <Content Include="img\keyboard-bg.jpg" />
+    <Content Include="img\kristijan.png" />
+    <Content Include="img\kristina.png" />
     <Content Include="img\l1.jpg" />
     <Content Include="img\logo.png" />
     <Content Include="img\plants-bg.jpg" />
