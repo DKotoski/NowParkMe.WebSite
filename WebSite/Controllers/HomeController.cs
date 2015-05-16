@@ -19,8 +19,13 @@ namespace WebSite.Controllers
             return View();
         }
 
+        [HttpPost]
         public JsonResult Subscribe(string email)
         {
+            if (db.Subscribers.SingleOrDefault(x=>x.Email==email)!=null)
+            {
+                return Json("False", JsonRequestBehavior.AllowGet); ;
+            }
             db.Subscribers.Add(new Subscriber() { Email = email });
             try
             {
@@ -32,20 +37,6 @@ namespace WebSite.Controllers
             }            
         }
 
-        public JsonResult SendEmailTo(string email)
-        {
-            SmtpClient client = new SmtpClient();
-            client.DeliveryMethod = SmtpDeliveryMethod.Network;
-            client.Credentials = new NetworkCredential("contact@nowpark.me", "ninja");
-            MailMessage mailMessage = new MailMessage();
-            mailMessage.From = new MailAddress("contact@nowpark.me");
-            mailMessage.Subject = "test";
-            mailMessage.Body = "test";
-
-                mailMessage.To.Add(email);
-
-            client.Send(mailMessage);
-            return Json("True",JsonRequestBehavior.AllowGet);
-        }
+        
     }
 }

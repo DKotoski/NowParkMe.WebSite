@@ -3,7 +3,21 @@
     padding-bottom: 20px;
     
 }
+::-webkit-input-placeholder {
+   color: darkgray;
+}
 
+:-moz-placeholder { /* Firefox 18- */
+   color: darkgray;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: darkgray;  
+}
+
+:-ms-input-placeholder {  
+   color: darkgray;  
+}
 /* Set padding to keep content from hitting the edges  */
 .body-content {
     padding-left: 15px;

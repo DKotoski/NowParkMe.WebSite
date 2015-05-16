@@ -3,31 +3,9 @@
 }
 
 <header id="home">
-    <nav>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
-                    <nav class="pull">
-                        <ul class="top-nav">
-                            <li><a href="#intro">Introduction <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
-                            <li><a href="#features">Features <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
-                            <li><a href="#responsive">Responsive Design <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
-                            @*<li><a href="#portfolio">Portfolio <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>*@
-                            <li><a href="#team">Team <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
-                            <li><a href="#contact">Get in Touch <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </nav>
     <section class="hero" id="hero">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-right navicon">
-                    <a id="nav-toggle" class="nav_slide_button" href="#"><span></span></a>
-                </div>
-            </div>
+            
             <div class="row">
                 <div class="logo">
                     <img src="~/img/logo.png" alt="nowpark.me logo" />
@@ -37,15 +15,7 @@
                     <p class="animated fadeInUp delay-05s">
                         What if parking could be stress-free, time-saving and really fun?
                         Be among the first to find out how this is possible. Subscribe to get a special surprise when we launch.
-                    </p>
-                @*Darko made this <div class="row">
-                     <div class="col-md-6 col-md-offset-3 text-center subscribe_head">
-                           <input type="text" name="email" id="email"/>
-                            <input type="submit" id="subscribe" value="Subscribe"/>
-                        <span id="valMessage"></span>
-                    </div>
-
-                </div>*@
+                    </p>              
             </div>
             <div class="row">
                 <div class="col-md-6 col-md-offset-3 text-center subscribe_head">
@@ -55,6 +25,7 @@
                 </div>
             </div>
         </div>
+            </div>
     </section>
 </header>
 <section class="intro text-center section-padding" id="intro">
@@ -129,7 +100,6 @@
                     <div id="servicesSlider">
                         <ul class="slides">
                             <li>
-                                @*<h1 class="arrow">Responsive Design Specialists</h1>*@
                                 <p>NowPark.me solves all parking related headaches.</p>
                                 <p>
                                     Looking for parking? 
@@ -139,14 +109,6 @@
 </p>
                                 <p>All you need to do is leave your e-mail and count to 997 888 716 until the app is up and running. Or just wait for us to come to you inbox and notify you that your parking problems are over. </p>
                             </li>
-                            @*<li>
-                                <h1 class="arrow">Bootstrap Professionals</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero. </p>
-                                <p>
-                                    Mauris ultrices odio vitae nulla ultrices iaculis. Nulla rhoncus odio eu lectus faucibus facilisis. Maecenas ornare augue vitae sollicitudin accumsan.
-                                </p>
-                                <p>Etiam eget libero et erat eleifend consectetur a nec lectus. Sed id tellus lorem. Suspendisse sed venenatis odio, quis lobortis eros.</p>
-                            </li>*@
                         </ul>
                     </div>
                 </div>
@@ -158,113 +120,13 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                <h1>Got 99 problems,<span>but <em>design</em> where to park ain't one any more</span></h1>
+                <h1>Got 99 problems,<span>but <em>where to park</em> ain't one any more</span></h1>
                 <a href="#portfolio" class="down-arrow-btn"><i class="fa fa-chevron-down"></i></a>  
             </div>
         </div>
     </div>
 </section>
-@*<section class="portfolio text-center section-padding" id="portfolio">
-        <div class="container">
-            <div class="row">
-                <div id="portfolioSlider">
-                    <ul class="slides">
-                        <li>
-                            <div class="col-md-4 wp4">
-                                <div class="overlay-effect effects clearfix">
-                                    <div class="img">
-                                        <img src="~/img/portfolio-01.jpg" alt="Portfolio Item">
-                                        <div class="overlay">
-                                            <a href="#" class="expand"><i class="fa fa-search"></i><br>View More</a>
-                                            <a class="close-overlay hidden">x</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h2>Creative Minds</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
-                            </div>
-                            <div class="col-md-4 wp4 delay-05s">
-                                <div class="overlay-effect effects clearfix">
-                                    <div class="img">
-                                        <img src="~/img/portfolio-02.jpg" alt="Portfolio Item">
-                                        <div class="overlay">
-                                            <a href="#" class="expand"><i class="fa fa-search"></i><br>View More</a>
-                                            <a class="close-overlay hidden">x</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h2>Creative Hearts</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
-                            </div>
-                            <div class="col-md-4 wp4 delay-1s">
-                                <div class="overlay-effect effects clearfix">
-                                    <div class="img">
-                                        <img src="~/img/portfolio-03.jpg" alt="Portfolio Item">
-                                        <div class="overlay">
-                                            <a href="#" class="expand"><i class="fa fa-search"></i><br>View More</a>
-                                            <a class="close-overlay hidden">x</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h2>Creative Ideas</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="col-md-4 wp4">
-                                <div class="overlay-effect effects clearfix">
-                                    <div class="img">
-                                        <img src="~/img/portfolio-01.jpg" alt="Portfolio Item">
-                                        <div class="overlay">
-                                            <a href="#" class="expand"><i class="fa fa-search"></i><br>View More</a>
-                                            <a class="close-overlay hidden">x</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h2>Creative Minds</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
-                            </div>
-                            <div class="col-md-4 wp4 delay-05s">
-                                <div class="overlay-effect effects clearfix">
-                                    <div class="img">
-                                        <img src="~/img/portfolio-02.jpg" alt="Portfolio Item">
-                                        <div class="overlay">
-                                            <a href="#" class="expand"><i class="fa fa-search"></i><br>View More</a>
-                                            <a class="close-overlay hidden">x</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h2>Creative Hearts</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
-                            </div>
-                            <div class="col-md-4 wp4 delay-1s">
-                                <div class="overlay-effect effects clearfix">
-                                    <div class="img">
-                                        <img src="~/img/portfolio-03.jpg" alt="Portfolio Item">
-                                        <div class="overlay">
-                                            <a href="#" class="expand"><i class="fa fa-search"></i><br>View More</a>
-                                            <a class="close-overlay hidden">x</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h2>Creative Ideas</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>*@
-@*<div class="ignite-cta text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <a href="#" class="ignite-btn">Ignite Your Passion</a>
-                </div>
-            </div>
-        </div>
-    </div>*@
+
 <section class="team text-center section-padding" id="team">
     <div class="container">
         <div class="row">
@@ -299,8 +161,8 @@
                                 <div class="social">
                                     <ul class="social-buttons">
                                         <li><a href="https://www.facebook.com/darkokotoski?fref=ts" class="social-btn"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#" class="social-btn"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#" class="social-btn"><i class="fa fa-envelope"></i></a></li>
+                                        <li><a href="https://twitter.com/VolkotSit" class="social-btn"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="mailto:darko@nowpark.me" class="social-btn"><i class="fa fa-envelope"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -336,7 +198,7 @@
 
                             <div class="col-md-4 wp5">
                                 <img src="~/img/kristijan.png" alt="Team Member">
-                                <h2>Kristija Arsovski</h2>
+                                <h2>Kristijan Arsovski</h2>
                                 <h3>Bohemian Developer</h3>
                                 <p>Alchol improves the code</p><br />
                                 <div class="social">
@@ -372,10 +234,11 @@
 <section class="subscribe text-center">
     <div class="container">
         <h1><i class="fa fa-paper-plane"></i><span>Subscribe to stay in the loop</span></h1>
-        <form action="#">
-            <input type="text" name="" value="" placeholder="" required>
-            <input type="submit" name="" value="Subscribe">
-        </form>
+        <div class="col-md-6 col-md-offset-3 text-center subscribe_head">
+            <input type="text" name="email" id="email1" placeholder="subscriber@examle.com" />
+            <input type="submit" id="subscribe1" value="Subscribe" />
+            <span id="valMessage1"></span>
+        </div>
     </div>
 </section>
 <section class="dark-bg text-center section-padding contact-wrap" id="contact">
@@ -402,7 +265,7 @@
             <div class="col-md-4">
                 <div class="light-box box-hover">
                     <h2><i class="fa fa-paper-plane"></i><span>Email</span></h2>
-                    <p><a href="#">contact@nowpark.me</a></p>
+                    <p><a href="mailto:contact@nowpark.me">contact@nowpark.me</a></p>
                 </div>
             </div>
         </div>
@@ -411,7 +274,7 @@
                 <ul class="social-buttons">
                     <li><a href="https://www.facebook.com/NowParkMe?fref=nf" class="social-btn"><i class="fa fa-facebook"></i></a></li>
                     <li><a href="#" class="social-btn"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#" class="social-btn"><i class="fa fa-envelope"></i></a></li>
+                    <li><a href="mailto:contact@nowpark.me" class="social-btn"><i class="fa fa-envelope"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -422,10 +285,6 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                @*<ul class="legals">
-                    <li><a href="#">Terms &amp; Conditions</a></li>
-                    <li><a href="#">Legals</a></li>
-                </ul>*@
             </div>
             <div class="col-md-6 credit">
                 <p><a href="https://www.facebook.com/NowParkMe?fref=nf">nowPark.me</a></p>
@@ -457,6 +316,25 @@
                 }
             });
         }
+        });
+
+        $("#subscribe1").on("click", function () {
+            var email = $("#email1");
+            var filter = /^([a-zA-Z0-9_\.\-])+\@@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+            if (!filter.test(email.val())) {
+                $("#valMessage1").html("<p style='color:red;'>Please input valid e-mail.</p>");
+                email.focus();
+                return;
+            } else {
+                $.post("/Home/Subscribe", { email: email.val() }, function (res) {
+                    if (res == "True") {
+                        $("#valMessage1").html("<p style='color:green;'>You have subscribed in our newsletter. Stay tuned for news :)</p>");
+                    } else {
+                        $("#valMessage1").html("<p style='color:red;'>Email is already in our database.</p>");
+                    }
+                });
+            }
         });
     });
     </script>
