@@ -175,6 +175,7 @@
     <Content Include="Content\css\flexslider.css" />
     <Content Include="Content\css\queries.css" />
     <Content Include="Content\css\styles.css" />
+    <Content Include="Content\template\template.htm" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -301,6 +302,7 @@
     <Content Include="Scripts\tinymce\themes\modern\theme.min.js" />
     <Content Include="Scripts\tinymce\tinymce.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Content\template\mailTemplate.htm" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -22,5 +22,20 @@
         });
     </script>
     <script src="~/Scripts/tinymce/tinymce.min.js"></script>
-    <script>tinymce.init({ selector: "#content" });</script>
+    <script>tinymce.init({
+    selector: "#content",
+    plugins: "template",
+    templates: [
+        {
+            title: "THE Template",
+            url: "/Content/template/mailTemplate.htm",
+            description: "A full template of the mails"
+        },
+        {
+            title: "THE other",
+            url: "/Content/template/template.htm",
+            description: "A full template of the mails"
+        }
+    ]
+});</script>
 }

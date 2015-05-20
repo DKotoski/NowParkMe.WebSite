@@ -29,16 +29,24 @@ namespace WebSite.Controllers
             client.Credentials = new NetworkCredential("contact@nowpark.me", "ninja");
             MailMessage mailMessage;
 
-            foreach (var subscriber in db.Subscribers.ToList())
-            {
-                mailMessage = new MailMessage();
-                mailMessage.From = new MailAddress("contact@nowpark.me");
-                mailMessage.IsBodyHtml = true;
-                mailMessage.Subject = title;
-                mailMessage.Body = content;
-                mailMessage.To.Add(subscriber.Email);
-                client.Send(mailMessage);
-            }
+            //foreach (var subscriber in db.Subscribers.ToList())
+            //{
+            //    mailMessage = new MailMessage();
+            //    mailMessage.From = new MailAddress("contact@nowpark.me");
+            //    mailMessage.IsBodyHtml = true;
+            //    mailMessage.Subject = title;
+            //    mailMessage.Body = content;
+            //    mailMessage.To.Add(subscriber.Email);
+            //    client.Send(mailMessage);
+            //}
+
+            mailMessage = new MailMessage();
+            mailMessage.From = new MailAddress("contact@nowpark.me");
+            mailMessage.IsBodyHtml = true;
+            mailMessage.Subject = title;
+            mailMessage.Body = content;
+            mailMessage.To.Add("wbountyhunter@gmail.com");
+            client.Send(mailMessage);
 
             return Json("Done", JsonRequestBehavior.AllowGet);
         }

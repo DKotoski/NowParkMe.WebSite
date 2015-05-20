@@ -35,8 +35,6 @@ namespace WebSite.Controllers
             {
                 return Json("False",JsonRequestBehavior.AllowGet);
             }            
-        }
-
-        
+        }        
     }
 }
