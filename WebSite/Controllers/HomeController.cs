@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Mail;
@@ -22,7 +23,7 @@ namespace WebSite.Controllers
         [HttpPost]
         public JsonResult Subscribe(string email)
         {
-            if (db.Subscribers.SingleOrDefault(x=>x.Email==email)!=null)
+            if (db.Subscribers.SingleOrDefault(x => x.Email == email) != null)
             {
                 return Json("False", JsonRequestBehavior.AllowGet); ;
             }
@@ -30,11 +31,34 @@ namespace WebSite.Controllers
             try
             {
                 db.SaveChanges();
-                return Json("True",JsonRequestBehavior.AllowGet);
-            }catch
+                string body;
+                using (var sr = new StreamReader(Server.MapPath("\\Content\\template\\") + "template.htm"))
+                {
+                    body = sr.ReadToEnd();
+                }
+                try
+                {
+                    SmtpClient client = new SmtpClient();
+                    client.DeliveryMethod = SmtpDeliveryMethod.Network;
+                    client.Credentials = new NetworkCredential("contact@nowpark.me", "ninja");
+                    MailMessage mailMessage = new MailMessage();
+                    mailMessage.From = new MailAddress("contact@nowpark.me");
+                    mailMessage.IsBodyHtml = true;
+                    mailMessage.Subject = "Welcome:)";
+                    mailMessage.Body = body;
+                    mailMessage.To.Add(email);
+                    client.Send(mailMessage);
+                }
+                catch (Exception e)
+                {
+                    ModelState.AddModelError("", e.Message);
+                }
+                return Json("True", JsonRequestBehavior.AllowGet);
+            }
+            catch
             {
-                return Json("False",JsonRequestBehavior.AllowGet);
-            }            
-        }        
+                return Json("False", JsonRequestBehavior.AllowGet);
+            }
+        }
     }
 }
